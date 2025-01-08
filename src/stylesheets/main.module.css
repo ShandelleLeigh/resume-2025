@@ -1,0 +1,24 @@
+.line-item{
+	display: grid;
+	grid-template-columns: 5rem 1fr;
+	min-width: 250px;
+}
+
+.donut{
+
+	animation: background 2s ease-in-out 1s 1;
+	transition: all 2s ease-in-out 1s 1;
+}
+
+/* .donut.filled{
+
+}
+
+.blank{
+	background: conic-gradient(
+	from 0deg at 50% 50%,
+	#8888FF 0deg,
+	transparent 0deg,
+	transparent 360deg
+);
+} */
