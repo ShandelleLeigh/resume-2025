@@ -1,16 +1,29 @@
 // imports
 import Intro from "@/components/intro";
-import Skills from "@/components/skill-circle";
+// import Skills from "@/components/skill-circle";
+import SkillLine from "@/components/skill-line";
 import { skillsList } from "@/utils/skills";
 
 const langList = skillsList["language"].map((item, index )=>
-    <Skills
+    <SkillLine
         title={item.title}
         key={item.title + "-" + index}
-        experience={item.experience ? item.experience : undefined}
+        experience={item.experience}
+
         totalTime={7}
-    ></Skills>
+    >
+    </SkillLine>
 )
+
+
+// const skillLine = skillsList["language"].map((item, index )=>
+//     <Skills
+//         title={item.title}
+//         key={item.title + "-" + index}
+//         experience={item.experience ? item.experience : undefined}
+//         totalTime={7}
+//     ></Skills>
+// )
 
 export default function Home() {
     return (
@@ -20,6 +33,7 @@ export default function Home() {
                 <div>
                     <h3>Skills, Languages, Tools</h3>
                     {langList}
+                    {/* {skillLine} */}
                 </div>
             </main>
             <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
